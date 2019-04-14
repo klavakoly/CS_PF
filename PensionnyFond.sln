@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PensionnyFond", "PensionnyFond\PensionnyFond.csproj", "{F7A3249A-EACF-4C6D-B703-056564CCDB86}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{3123D345-8E7A-4FB0-B04C-5E77528CCD40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F7A3249A-EACF-4C6D-B703-056564CCDB86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7A3249A-EACF-4C6D-B703-056564CCDB86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7A3249A-EACF-4C6D-B703-056564CCDB86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3123D345-8E7A-4FB0-B04C-5E77528CCD40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3123D345-8E7A-4FB0-B04C-5E77528CCD40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3123D345-8E7A-4FB0-B04C-5E77528CCD40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3123D345-8E7A-4FB0-B04C-5E77528CCD40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
