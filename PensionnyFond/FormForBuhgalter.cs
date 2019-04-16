@@ -23,15 +23,15 @@ namespace PensionnyFond
         {
             string connectionString = @"Server=LAPTOP-TSM0D2RH\SQLEXPRESS;Database=Pensionny_Fond;User Id=admin; " +
                 "Password = admin; ";
-            IRepository<Person> a = new PersonRepository(connectionString);
+            IRepository<Person> a = PersonRepository.GetRepository();
             Person p = a.Get(1);
-            
+
         }
 
-        
+
         private void button1_Click(object sender, EventArgs e)
         {
-            StatementForm person = new StatementForm();
+            StatementForm person = new StatementForm(this);
             person.ShowDialog();
         }
 
@@ -42,7 +42,7 @@ namespace PensionnyFond
 
         private void label2_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void onFormClousing(object sender, FormClosedEventArgs e)
@@ -51,6 +51,7 @@ namespace PensionnyFond
         }
 
         private readonly Form mainForm;
+        private readonly string connectionString;
 
         private void label1_Click_1(object sender, EventArgs e)
         {

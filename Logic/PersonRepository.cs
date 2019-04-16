@@ -10,9 +10,22 @@ namespace Logic
 {
     public class PersonRepository : IRepository<Person>
     {
+
         public void Add(Person obj)
         {
-            throw new NotImplementedException();
+            string date = $"{obj.DataRogdeniya.Year}.{obj.DataRogdeniya.Month}.{obj.DataRogdeniya.Day}";
+            string query = "INSERT INTO People(INN, Surname, Name, MiddleName, RegistrationCity, ContactPhone, DataaRogdeniya)" +
+            $" VALUES ({obj.INN},'{obj.Surname}', '{obj.Name}','{obj.MiddleName}', '{obj.Surname}', '{obj.ContactPhone}', '{date}')";
+            try
+            {
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    connection.Query(query);
+                }
+            }catch(Exception e)
+            {
+                //ToDo
+            }
         }
 
         public void Delete(int ID)
@@ -27,7 +40,7 @@ namespace Logic
             using (var connection = new SqlConnection(connectionString))
             {
                 res = connection.
-                    Query<Person>(aSQL,new { INN = ID})
+                    Query<Person>(aSQL, new { INN = ID })
                     .First();
 
             }
@@ -41,9 +54,26 @@ namespace Logic
 
         private string connectionString;
 
-        public PersonRepository(string connectionString)
+        private PersonRepository( )
         {
-            this.connectionString = connectionString;
+
+        }
+
+        private static PersonRepository repository = new PersonRepository();
+
+        public static void Configure(string connectionString)
+        {
+            repository.connectionString = connectionString;
+        }
+
+        public static PersonRepository GetRepository()
+        {
+            return repository;
+        }
+
+        public IEnumerable<Person> GetAll()
+        {
+            throw new NotImplementedException();
         }
     }
 }

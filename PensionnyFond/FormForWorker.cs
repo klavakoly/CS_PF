@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Logic;
 
 namespace PensionnyFond
 {
     public partial class FormForWorker : Form
     {
-        private readonly Form mainForm;
         public FormForWorker()
         {
             InitializeComponent();
@@ -21,7 +21,7 @@ namespace PensionnyFond
         public FormForWorker(Form mainForm)
         {
             InitializeComponent();
-            this.mainForm = mainForm;
+            this.mainForm = mainForm;            
         }
 
         public void OnClosing(object sender, FormClosedEventArgs e)
@@ -31,7 +31,16 @@ namespace PensionnyFond
 
         private void CalculationFormForWorker_Load(object sender, EventArgs e)
         {
-
+            
         }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            StatementForm statement = new StatementForm(this);
+            statement.ShowDialog();
+        }
+
+        private readonly Form mainForm;
+        private readonly string connectionString;
     }
 }

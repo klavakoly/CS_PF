@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logic.Security;
+using Logic;
 
 namespace PensionnyFond
 {
@@ -32,9 +33,10 @@ namespace PensionnyFond
             
             if (check)
             {
+                ConfigurateRepositories(autentification.GetConnectionString());
                 Roles role = autentification.GetRole(LoginBox.Text, PasswordBox.Text);
                 Hide();
-
+                string cs = autentification.GetConnectionString();
                 switch (role)
                 {
                     case Roles.Worker:
@@ -58,5 +60,13 @@ namespace PensionnyFond
                 label4.Visible = true;
             }
         }
+        private void ConfigurateRepositories(string connectionString)
+        {
+            DocumentRepository.Configure(connectionString);
+            PersonRepository.Configure(connectionString);
+            TypePensyRepository.Configure(connectionString);
+        }
+
+        
     }
 }

@@ -12,6 +12,7 @@ namespace Logic
         void Update(T obj);
         void Add(T obj);
         T Get(int ID);
+        IEnumerable<T> GetAll();
     }
 }
 

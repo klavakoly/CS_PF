@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Logic;
 
 namespace PensionnyFond
 {
@@ -16,7 +17,7 @@ namespace PensionnyFond
         {
             this.mainForm = mainForm;
             InitializeComponent();
-            
+            personRepository = PersonRepository.GetRepository();
         }
 
         public void OnClosing(object sender, FormClosedEventArgs e)
@@ -26,9 +27,12 @@ namespace PensionnyFond
         
         private void CalculationFormForGosty_Load(object sender, EventArgs e)
         {
-
+            //personRepository.Add();
         }
         
         private readonly Form mainForm;
+        private readonly PersonRepository personRepository;
+
+
     }
 }

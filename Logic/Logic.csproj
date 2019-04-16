@@ -43,12 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Document.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="DocumentRepository.cs" />
     <Compile Include="Security\Autentification.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="PersonRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\Roles.cs" />
+    <Compile Include="TypePensy.cs" />
+    <Compile Include="TypePensyRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

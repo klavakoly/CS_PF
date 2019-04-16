@@ -13,7 +13,7 @@ namespace Logic.Security
     {
         public bool CheckLogin(string login, string password)
         {          
-            string connectionString = @"Server=LAPTOP-TSM0D2RH\SQLEXPRESS;Database=Pensionny_Fond;User Id="+login+"; " +
+            connectionString = @"Server=LAPTOP-TSM0D2RH\SQLEXPRESS;Database=Pensionny_Fond;User Id="+login+"; " +
                 "Password ="+password+"; ";
            try
             {
@@ -28,6 +28,11 @@ namespace Logic.Security
             }
         }
 
+        public string GetConnectionString()
+        {
+            return connectionString;
+        }
+
         public Roles GetRole(string login, string password)
         {
             string connectionString = @"Server=LAPTOP-TSM0D2RH\SQLEXPRESS;Database=Pensionny_Fond;User Id=" + login + "; " +
@@ -38,5 +43,7 @@ namespace Logic.Security
                 return connection.Query<Roles>(query).First();               
             }            
         }
+
+        private string connectionString;
     }
 }
