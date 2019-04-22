@@ -9,9 +9,10 @@ namespace Logic
     public interface IRepository<T>
     {
         void Delete(int ID);
-        void Update(T obj);
-        void Add(T obj);
+        bool Update(T obj);
+        bool Add(T obj);
         T Get(int ID);
+        T[] GetByID(int ID);
         IEnumerable<T> GetAll();
     }
 }

@@ -33,6 +33,16 @@ namespace PensionnyFond
         private readonly Form mainForm;
         private readonly PersonRepository personRepository;
 
+        private void buttonLgote_Click(object sender, EventArgs e)
+        {
+            LgotsForPensyForm lgots = new LgotsForPensyForm();
+            lgots.ShowDialog();
+        }
 
+        private void buttonPency_Click(object sender, EventArgs e)
+        {
+            VDVPForm vdvp = new VDVPForm();
+            vdvp.ShowDialog();
+        }
     }
 }

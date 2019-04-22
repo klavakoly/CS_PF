@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckForm.Designer.cs">
+      <DependentUpon>CheckForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormForBuhgalter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,36 @@
     <Compile Include="FormForWorker.Designer.cs">
       <DependentUpon>FormForWorker.cs</DependentUpon>
     </Compile>
+    <Compile Include="InformationAboutPersonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformationAboutPersonForm.Designer.cs">
+      <DependentUpon>InformationAboutPersonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LgotsForPensyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LgotsForPensyForm.Designer.cs">
+      <DependentUpon>LgotsForPensyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonPricazForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonPricazForm.Designer.cs">
+      <DependentUpon>PersonPricazForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonsListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonsListForm.Designer.cs">
+      <DependentUpon>PersonsListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PricazForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PricazForm.Designer.cs">
+      <DependentUpon>PricazForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StatementForm.cs">
@@ -78,8 +114,17 @@
     <Compile Include="StatementForm.Designer.cs">
       <DependentUpon>StatementForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="VDVPForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VDVPForm.Designer.cs">
+      <DependentUpon>VDVPForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AutentificationForm.resx">
       <DependentUpon>AutentificationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckForm.resx">
+      <DependentUpon>CheckForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormForBuhgalter.resx">
       <DependentUpon>FormForBuhgalter.cs</DependentUpon>
@@ -89,6 +134,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormForWorker.resx">
       <DependentUpon>FormForWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformationAboutPersonForm.resx">
+      <DependentUpon>InformationAboutPersonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LgotsForPensyForm.resx">
+      <DependentUpon>LgotsForPensyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonPricazForm.resx">
+      <DependentUpon>PersonPricazForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonsListForm.resx">
+      <DependentUpon>PersonsListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PricazForm.resx">
+      <DependentUpon>PricazForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -101,6 +161,9 @@
     </Compile>
     <EmbeddedResource Include="StatementForm.resx">
       <DependentUpon>StatementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VDVPForm.resx">
+      <DependentUpon>VDVPForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

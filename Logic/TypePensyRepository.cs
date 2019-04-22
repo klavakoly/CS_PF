@@ -11,7 +11,7 @@ namespace Logic
 {
     public class TypePensyRepository : IRepository<TypePensy>
     {
-        public void Add(TypePensy obj)
+        public bool Add(TypePensy obj)
         {
             throw new NotImplementedException();
         }
@@ -23,7 +23,17 @@ namespace Logic
 
         public TypePensy Get(int ID)
         {
-            throw new NotImplementedException();
+            string aSQL = "select TipeOfPensy.IDpensy as id, TypePensy as name from TipeOfPensy join " +
+                          "Rassmotrenie on Rassmotrenie.IDpensy = TipeOfPensy.IDpensy where INN = @INN";
+            TypePensy res = null;
+            using (var connection = new SqlConnection(connectionString))
+            {
+                res = connection.
+                    Query<TypePensy>(aSQL, new { INN = ID })
+                    .First();
+
+            }
+            return res;
         }
 
         public IEnumerable<TypePensy> GetAll()
@@ -32,6 +42,15 @@ namespace Logic
             using (var connection = new SqlConnection(connectionString))
             {
                 return connection.Query<TypePensy>(query);
+            }
+        }
+
+        public int GetIdPency(string name)
+        {
+            string query = $"select IDpensy from TipeOfPensy where TypePensy = '{name}'";
+            using (var connection = new SqlConnection(connectionString))
+            {
+                return connection.Query<int>(query).First();
             }
         }
 
@@ -55,6 +74,16 @@ namespace Logic
         public static TypePensyRepository GetRepository()
         {
             return repository;
+        }
+
+        public TypePensy[] GetByID(int ID)
+        {
+            throw new NotImplementedException();
+        }
+
+        bool IRepository<TypePensy>.Update(TypePensy obj)
+        {
+            throw new NotImplementedException();
         }
     }
 }

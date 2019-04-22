@@ -11,31 +11,38 @@ namespace Logic
     public class PersonRepository : IRepository<Person>
     {
 
-        public void Add(Person obj)
+        public bool Add(Person obj)
         {
             string date = $"{obj.DataRogdeniya.Year}.{obj.DataRogdeniya.Month}.{obj.DataRogdeniya.Day}";
-            string query = "INSERT INTO People(INN, Surname, Name, MiddleName, RegistrationCity, ContactPhone, DataaRogdeniya)" +
-            $" VALUES ({obj.INN},'{obj.Surname}', '{obj.Name}','{obj.MiddleName}', '{obj.Surname}', '{obj.ContactPhone}', '{date}')";
+            //string query = "INSERT INTO People(INN, Surname, Name, MiddleName, RegistrationCity, ContactPhone, DataaRogdeniya)" +
+            //$" VALUES ({obj.INN},'{obj.Surname}', '{obj.Name}','{obj.MiddleName}', '{obj.ContactPhone}', '{date}')";
+            string query = $"exec AddPerson {obj.INN}, '{obj.Surname}', '{obj.Name}', '{obj.MiddleName}', '{obj.ContactPhone}', '{date}'";
             try
             {
                 using (var connection = new SqlConnection(connectionString))
                 {
                     connection.Query(query);
                 }
-            }catch(Exception e)
-            {
-                //ToDo
             }
+            catch (Exception e)
+            {
+                return false;
+            }
+            return true;
         }
 
         public void Delete(int ID)
         {
-            throw new NotImplementedException();
+            string query = $"exec dbo.DeleteAllAboutPerson {ID}";
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Query(query);
+            }
         }
 
         public Person Get(int ID)
         {
-            string aSQL = "select * from People where INN = @INN";
+            string aSQL = "select INN, Surname as surname, Name, MiddleName, ContactPhone, RegistrationCity, DataaRogdeniya as DataRogdeniya from People where INN = @INN";
             Person res = null;
             using (var connection = new SqlConnection(connectionString))
             {
@@ -54,7 +61,7 @@ namespace Logic
 
         private string connectionString;
 
-        private PersonRepository( )
+        private PersonRepository()
         {
 
         }
@@ -72,6 +79,21 @@ namespace Logic
         }
 
         public IEnumerable<Person> GetAll()
+        {
+            string query = "select INN as iNN, Surname as surname, Name as name, MiddleName as middleName, " +
+                "ContactPhone as contactPhone, RegistrationCity as registrationCity, DataaRogdeniya as dataRogdeniya from People";
+            using (var connection = new SqlConnection(connectionString))
+            {
+                return connection.Query<Person>(query);
+            }
+        }
+
+        public Person[] GetByID(int ID)
+        {
+            throw new NotImplementedException();
+        }
+
+        bool IRepository<Person>.Update(Person obj)
         {
             throw new NotImplementedException();
         }

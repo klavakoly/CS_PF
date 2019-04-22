@@ -41,6 +41,23 @@ namespace PensionnyFond
         }
 
         private readonly Form mainForm;
-        private readonly string connectionString;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LgotsForPensyForm lgotsForPensy = new LgotsForPensyForm();
+            lgotsForPensy.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            PersonsListForm personsListForm = new PersonsListForm();
+            personsListForm.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            PricazForm pricazForm = new PricazForm();
+            pricazForm.ShowDialog();
+        }
     }
 }

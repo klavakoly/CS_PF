@@ -1,6 +1,6 @@
 ﻿namespace PensionnyFond
 {
-    partial class StatementForm
+    partial class InformationAboutPersonForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SernameBox = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TypePensyBox = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.ErrorLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.CityBox = new System.Windows.Forms.TextBox();
             this.INNBox = new System.Windows.Forms.TextBox();
@@ -43,28 +48,94 @@
             this.MiddleName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.NameBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.SernameBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.StatementLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.TypePensyBox = new System.Windows.Forms.ComboBox();
             this.ListOfDocuments = new System.Windows.Forms.CheckedListBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.ErrorLabel = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.buttonDelete = new System.Windows.Forms.Button();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // SernameBox
+            // panel4
             // 
-            this.SernameBox.Location = new System.Drawing.Point(219, 79);
-            this.SernameBox.Name = "SernameBox";
-            this.SernameBox.Size = new System.Drawing.Size(200, 22);
-            this.SernameBox.TabIndex = 0;
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel4.BackColor = System.Drawing.SystemColors.Control;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.buttonDelete);
+            this.panel4.Controls.Add(this.panel3);
+            this.panel4.Controls.Add(this.ErrorLabel);
+            this.panel4.Controls.Add(this.panel1);
+            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.StatementLabel);
+            this.panel4.Controls.Add(this.panel2);
+            this.panel4.Location = new System.Drawing.Point(26, 29);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1015, 897);
+            this.panel4.TabIndex = 17;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.TypePensyBox);
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panel3.Location = new System.Drawing.Point(37, 386);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(937, 115);
+            this.panel3.TabIndex = 14;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(390, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 17);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Вид пенсии";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // TypePensyBox
+            // 
+            this.TypePensyBox.FormattingEnabled = true;
+            this.TypePensyBox.Location = new System.Drawing.Point(390, 53);
+            this.TypePensyBox.Name = "TypePensyBox";
+            this.TypePensyBox.Size = new System.Drawing.Size(210, 28);
+            this.TypePensyBox.TabIndex = 12;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Location = new System.Drawing.Point(32, 56);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(288, 25);
+            this.label13.TabIndex = 11;
+            this.label13.Text = "Подача заявления на пенсию ";
+            // 
+            // ErrorLabel
+            // 
+            this.ErrorLabel.AutoSize = true;
+            this.ErrorLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.ErrorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.ErrorLabel.Location = new System.Drawing.Point(427, 777);
+            this.ErrorLabel.Name = "ErrorLabel";
+            this.ErrorLabel.Size = new System.Drawing.Size(169, 18);
+            this.ErrorLabel.TabIndex = 18;
+            this.ErrorLabel.Text = "Некорректные данные!";
+            this.ErrorLabel.Visible = false;
             // 
             // panel1
             // 
@@ -85,9 +156,9 @@
             this.panel1.Controls.Add(this.MiddleName);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.NameBox);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.SernameBox);
-            this.panel1.Location = new System.Drawing.Point(39, 71);
+            this.panel1.Location = new System.Drawing.Point(37, 71);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(937, 304);
             this.panel1.TabIndex = 1;
@@ -160,6 +231,8 @@
             this.DateBox.CustomFormat = "дд.мм.гггг";
             this.DateBox.ImeMode = System.Windows.Forms.ImeMode.On;
             this.DateBox.Location = new System.Drawing.Point(219, 246);
+            this.DateBox.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
+            this.DateBox.MinDate = new System.DateTime(1940, 1, 1, 0, 0, 0, 0);
             this.DateBox.Name = "DateBox";
             this.DateBox.Size = new System.Drawing.Size(200, 22);
             this.DateBox.TabIndex = 6;
@@ -208,26 +281,49 @@
             this.NameBox.Size = new System.Drawing.Size(200, 22);
             this.NameBox.TabIndex = 2;
             // 
-            // label1
+            // label8
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(51, 79);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Фамилия";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(51, 79);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(103, 25);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Фамилия";
+            // 
+            // SernameBox
+            // 
+            this.SernameBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.SernameBox.Location = new System.Drawing.Point(219, 79);
+            this.SernameBox.Name = "SernameBox";
+            this.SernameBox.Size = new System.Drawing.Size(200, 22);
+            this.SernameBox.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.BackColor = System.Drawing.SystemColors.MenuText;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(389, 806);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(249, 57);
+            this.button1.TabIndex = 15;
+            this.button1.Tag = true;
+            this.button1.Text = "Редактировать";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // StatementLabel
             // 
             this.StatementLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.StatementLabel.AutoSize = true;
             this.StatementLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.StatementLabel.Location = new System.Drawing.Point(431, 20);
+            this.StatementLabel.Location = new System.Drawing.Point(429, 20);
             this.StatementLabel.Name = "StatementLabel";
-            this.StatementLabel.Size = new System.Drawing.Size(150, 31);
+            this.StatementLabel.Size = new System.Drawing.Size(251, 31);
             this.StatementLabel.TabIndex = 2;
-            this.StatementLabel.Text = "Заявление";
+            this.StatementLabel.Text = "Данные заявителя";
             this.StatementLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel2
@@ -236,160 +332,102 @@
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.TypePensyBox);
             this.panel2.Controls.Add(this.ListOfDocuments);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.label12);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.panel2.Location = new System.Drawing.Point(39, 421);
+            this.panel2.Location = new System.Drawing.Point(37, 513);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(937, 245);
             this.panel2.TabIndex = 13;
             // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(34, 17);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 17);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Вид пенсии";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // TypePensyBox
-            // 
-            this.TypePensyBox.FormattingEnabled = true;
-            this.TypePensyBox.Location = new System.Drawing.Point(37, 95);
-            this.TypePensyBox.Name = "TypePensyBox";
-            this.TypePensyBox.Size = new System.Drawing.Size(210, 28);
-            this.TypePensyBox.TabIndex = 12;
-            // 
             // ListOfDocuments
             // 
             this.ListOfDocuments.FormattingEnabled = true;
-            this.ListOfDocuments.Location = new System.Drawing.Point(471, 56);
+            this.ListOfDocuments.Location = new System.Drawing.Point(37, 56);
             this.ListOfDocuments.Name = "ListOfDocuments";
-            this.ListOfDocuments.Size = new System.Drawing.Size(401, 151);
+            this.ListOfDocuments.Size = new System.Drawing.Size(835, 151);
             this.ListOfDocuments.TabIndex = 8;
             // 
-            // label9
+            // label12
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(32, 56);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(288, 25);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Подача заявления на пенсию ";
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(363, 15);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(152, 17);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Поданные документы";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label10
+            // buttonDelete
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(468, 17);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(152, 17);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "Поданные документы";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonDelete.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonDelete.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.buttonDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonDelete.Location = new System.Drawing.Point(725, 806);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(249, 57);
+            this.buttonDelete.TabIndex = 19;
+            this.buttonDelete.Tag = true;
+            this.buttonDelete.Text = "Удалить";
+            this.buttonDelete.UseVisualStyleBackColor = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.BackColor = System.Drawing.SystemColors.MenuText;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(384, 722);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(249, 57);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Подать заявление";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel4.BackColor = System.Drawing.SystemColors.Control;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.ErrorLabel);
-            this.panel4.Controls.Add(this.panel1);
-            this.panel4.Controls.Add(this.button1);
-            this.panel4.Controls.Add(this.StatementLabel);
-            this.panel4.Controls.Add(this.panel2);
-            this.panel4.Location = new System.Drawing.Point(31, 26);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1018, 831);
-            this.panel4.TabIndex = 16;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
-            // 
-            // ErrorLabel
-            // 
-            this.ErrorLabel.AutoSize = true;
-            this.ErrorLabel.BackColor = System.Drawing.SystemColors.Control;
-            this.ErrorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.ErrorLabel.Location = new System.Drawing.Point(421, 688);
-            this.ErrorLabel.Name = "ErrorLabel";
-            this.ErrorLabel.Size = new System.Drawing.Size(169, 18);
-            this.ErrorLabel.TabIndex = 18;
-            this.ErrorLabel.Text = "Некорректные данные!";
-            this.ErrorLabel.Visible = false;
-            // 
-            // StatementForm
+            // InformationAboutPersonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1082, 888);
+            this.ClientSize = new System.Drawing.Size(1070, 951);
             this.Controls.Add(this.panel4);
-            this.Name = "StatementForm";
+            this.Name = "InformationAboutPersonForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Заявление";
+            this.Text = "Информация о заявителе";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.StatementForm_Load);
+            this.Load += new System.EventHandler(this.InformationAboutPersonForm_Load);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox SernameBox;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label ErrorLabel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label StatementLabel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox CityBox;
+        private System.Windows.Forms.TextBox INNBox;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox PhoneBox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker DateBox;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox MiddleName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox NameBox;
-        private System.Windows.Forms.DateTimePicker DateBox;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox PhoneBox;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox TypePensyBox;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox SernameBox;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox INNBox;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label StatementLabel;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox TypePensyBox;
         private System.Windows.Forms.CheckedListBox ListOfDocuments;
-        private System.Windows.Forms.TextBox CityBox;
-        private System.Windows.Forms.Label ErrorLabel;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button buttonDelete;
     }
 }

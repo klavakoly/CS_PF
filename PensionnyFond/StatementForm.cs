@@ -19,30 +19,65 @@ namespace PensionnyFond
             personRepository = PersonRepository.GetRepository();
             documentRepository = DocumentRepository.GetRepository();
             typePensyRepository = TypePensyRepository.GetRepository();
+            statementRepository = StatementRepository.GetRepository();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //personRepository.Add(new Person(
-            //    Convert.ToInt32(INNBox.Text),
-            //    SernameBox.Text,
-            //    NameBox.Text,
-            //    MiddleName.Text,
-            //    PhoneBox.Text,
-            //    CityBox.Text,
-            //    Convert.ToDateTime(DateBox.Text)));
-
-
+            List<Document> documents = new List<Document>();
+            for (int i = 0; i < ListOfDocuments.Items.Count; i++)
+            {
+                if (ListOfDocuments.GetItemChecked(i))
+                {
+                    documents.Add((Document)ListOfDocuments.Items[i]);
+                }
+            }
+            try
+            {
+                if (statementRepository.Add(new Statement(
+                    new Person(
+                        Convert.ToInt32(INNBox.Text),
+                        SernameBox.Text,
+                        NameBox.Text,
+                        MiddleName.Text,
+                        PhoneBox.Text,
+                        CityBox.Text,
+                        Convert.ToDateTime(DateBox.Text)),
+                    (TypePensy)TypePensyBox.SelectedItem,
+                    documents,
+                    DateTime.Now)))
+                {
+                    Close();
+                }
+                else
+                {
+                    OnError();
+                };
+            }catch(Exception ex)
+            {
+                OnError();
+            }
         }
-
-        private readonly PersonRepository personRepository ;
+        private void OnError()
+        {
+            ErrorLabel.Visible = true;
+        }
+        private readonly PersonRepository personRepository;
         private readonly DocumentRepository documentRepository;
         private readonly TypePensyRepository typePensyRepository;
+        private readonly StatementRepository statementRepository;
+
 
         private void StatementForm_Load(object sender, EventArgs e)
         {
             ListOfDocuments.Items.AddRange(documentRepository.GetAll().ToArray());
             TypePensyBox.Items.AddRange(typePensyRepository.GetAll().ToArray());
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

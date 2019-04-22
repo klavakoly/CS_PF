@@ -65,6 +65,9 @@ namespace PensionnyFond
             DocumentRepository.Configure(connectionString);
             PersonRepository.Configure(connectionString);
             TypePensyRepository.Configure(connectionString);
+            StatementRepository.Configure(connectionString);
+            LgoteRepository.Configure(connectionString);
+            PricazRepository.Configure(connectionString);
         }
 
         

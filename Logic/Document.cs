@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Logic
 {
-    public class Document
+    public class Document : IEquatable<Document>
     {
         public Document(int id, string name)
         {
@@ -17,6 +17,11 @@ namespace Logic
         public override string ToString()
         {
             return Name_;
+        }
+
+        public bool Equals(Document other)
+        {
+            return ID_ == other.ID_;
         }
 
         public int ID_ { get; }
