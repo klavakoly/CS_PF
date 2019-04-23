@@ -43,7 +43,7 @@ namespace Logic
 
         public override string ToString()
         {
-            return INN + " " + Sername + " " + Name + " " + MiddleName;
+            return INN.ToString().PadRight(5) + " " + Sername + " " + Name + " " + MiddleName;
         }
 
     }

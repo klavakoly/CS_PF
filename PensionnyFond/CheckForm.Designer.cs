@@ -82,7 +82,7 @@
             this.MinimumSize = new System.Drawing.Size(477, 295);
             this.Name = "CheckForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CheckForm";
+            this.Text = "Удалить";
             this.ResumeLayout(false);
             this.PerformLayout();
 

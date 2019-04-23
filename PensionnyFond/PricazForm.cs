@@ -44,5 +44,10 @@ namespace PensionnyFond
             personPricaz.ShowDialog();
         }
         private readonly PricazRepository pricazRepository;
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

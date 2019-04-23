@@ -44,7 +44,7 @@
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetDouble;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 560F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 600F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -60,23 +60,24 @@
             this.panel1.Controls.Add(this.ListPricaz);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(93, 6);
+            this.panel1.Location = new System.Drawing.Point(73, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(554, 504);
+            this.panel1.Size = new System.Drawing.Size(594, 504);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // ListPricaz
             // 
             this.ListPricaz.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ListPricaz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ListPricaz.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ListPricaz.FormattingEnabled = true;
-            this.ListPricaz.ItemHeight = 25;
-            this.ListPricaz.Location = new System.Drawing.Point(63, 122);
+            this.ListPricaz.ItemHeight = 22;
+            this.ListPricaz.Location = new System.Drawing.Point(22, 122);
             this.ListPricaz.Name = "ListPricaz";
             this.ListPricaz.ScrollAlwaysVisible = true;
-            this.ListPricaz.Size = new System.Drawing.Size(427, 354);
+            this.ListPricaz.Size = new System.Drawing.Size(551, 356);
             this.ListPricaz.TabIndex = 1;
             this.ListPricaz.DoubleClick += new System.EventHandler(this.Window_OnDoubleClic);
             // 
@@ -89,14 +90,14 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(554, 87);
+            this.panel2.Size = new System.Drawing.Size(594, 87);
             this.panel2.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(63, 31);
+            this.label1.Location = new System.Drawing.Point(16, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 25);
             this.label1.TabIndex = 1;
@@ -105,7 +106,7 @@
             // SearchBox
             // 
             this.SearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SearchBox.Location = new System.Drawing.Point(137, 30);
+            this.SearchBox.Location = new System.Drawing.Point(220, 34);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(352, 26);
             this.SearchBox.TabIndex = 0;

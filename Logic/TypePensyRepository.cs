@@ -23,13 +23,16 @@ namespace Logic
 
         public TypePensy Get(int ID)
         {
-            string aSQL = "select TipeOfPensy.IDpensy as id, TypePensy as name from TipeOfPensy join " +
-                          "Rassmotrenie on Rassmotrenie.IDpensy = TipeOfPensy.IDpensy where INN = @INN";
+            //string aSQL = "select TipeOfPensy.IDpensy as id, TypePensy as name from TipeOfPensy join " +
+            //              "Rassmotrenie on Rassmotrenie.IDpensy = TipeOfPensy.IDpensy where INN = @INN";
+            string query = "select TipeOfPensy.IDpensy as id, TypePensy as name, sizePensy as sizePency from TipeOfPensy join " +
+                            "Rassmotrenie on Rassmotrenie.IDpensy = TipeOfPensy.IDpensy join " +
+                            "SizePensy on SizePensy.IDpensy = Rassmotrenie.IDpensy where INN = @INN";
             TypePensy res = null;
             using (var connection = new SqlConnection(connectionString))
             {
                 res = connection.
-                    Query<TypePensy>(aSQL, new { INN = ID })
+                    Query<TypePensy>(query, new { INN = ID })
                     .First();
 
             }
@@ -38,7 +41,8 @@ namespace Logic
 
         public IEnumerable<TypePensy> GetAll()
         {
-            string query = "select IDpensy as id, TypePensy as name from TipeOfPensy";
+            string query = "select TipeOfPensy.IDpensy as id, TypePensy as name, SizePensy as sizePency from TipeOfPensy join "+
+                           "SizePensy on SizePensy.IDpensy = TipeOfPensy.IDpensy";
             using (var connection = new SqlConnection(connectionString))
             {
                 return connection.Query<TypePensy>(query);

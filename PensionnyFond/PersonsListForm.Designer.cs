@@ -73,10 +73,10 @@
             this.ListPersons.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ListPersons.FormattingEnabled = true;
             this.ListPersons.ItemHeight = 25;
-            this.ListPersons.Location = new System.Drawing.Point(63, 122);
+            this.ListPersons.Location = new System.Drawing.Point(17, 122);
             this.ListPersons.Name = "ListPersons";
             this.ListPersons.ScrollAlwaysVisible = true;
-            this.ListPersons.Size = new System.Drawing.Size(427, 404);
+            this.ListPersons.Size = new System.Drawing.Size(519, 404);
             this.ListPersons.TabIndex = 1;
             this.ListPersons.DoubleClick += new System.EventHandler(this.Window_OnDoubleClic);
             // 
